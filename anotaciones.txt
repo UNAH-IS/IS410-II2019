@@ -1,0 +1,32 @@
+Estructura de una regla CSS
+
+selector {
+    propiedad1:valor1;
+    propiedad2:valor2;
+    ...
+    propiedadN:valorN;
+}
+
+
+Formas de incluir reglas CSS en un documento HTML
+1. CSS en linea:
+    *Se incluye directamente en la etiqueta
+    *Se utiliza el atributo style y se aplican los estilos de la siguiente forma:
+     style="propiedad1:valor1;propiedad2:valor2;...propiedadN:valorN;"
+
+2. CSS en el encabezado del documento
+    *Se incluye utilizando la ETIQUETA style dentro de la etiqueta head y se definen las reglas CSS de la siguiente forma:
+    
+    selector {
+        propiedad1:valor1;
+        propiedad2:valor2;
+        ...
+        propiedadN:valorN;
+    }
+
+    Un selector es un identificador para seleccionar una o varias etiquetas
+    Tipos de selectores:
+    *Por el nombre de la etiqueta
+    *Por el ID de una etiqueta, en este caso el selector llevara el prefijo numeral (#)
+    *Por la definición de una clase CSS, en este caso el selector llevará el prefijo punto (.)
+3. CSS en archivos externos
