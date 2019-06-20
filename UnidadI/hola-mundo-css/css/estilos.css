@@ -1,0 +1,17 @@
+p{
+    border: 2px dotted rgb(0,0,255);
+    font-weight: bold; /*Texto en negrita*/
+}
+
+#ultimo-parrafo{
+    color:red;
+    background-color:rgb(255, 112, 9);
+}
+.parrafo-verde{
+    background-color:green;
+    text-decoration: underline;
+}
+
+#primer-parrafo{
+    color:rgb(236, 12, 49);
+}
