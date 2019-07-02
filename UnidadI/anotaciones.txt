@@ -30,3 +30,7 @@ Formas de incluir reglas CSS en un documento HTML
     *Por el ID de una etiqueta, en este caso el selector llevara el prefijo numeral (#)
     *Por la definición de una clase CSS, en este caso el selector llevará el prefijo punto (.)
 3. CSS en archivos externos
+
+
+
+Consulta a medios (Media Query)

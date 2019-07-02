@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #imagen-cartman{
+            display: none; /*Invisible para pantallas grandes*/
+        }
+
+        .columna-contenido{
+            background-color:red;
+            border:1px solid blueviolet;
+            padding:10px;
+            width:33.3333%;
+            float:left;
+            box-sizing: border-box;
+            font-size:1.3rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: gray;
+
+            }
+
+            #imagen-cartman{
+                display: block; /*visible para pantallas pequeñas*/
+            }
+
+            .columna-contenido{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    Hola Mundo
+    <img id="imagen-cartman" src="img/cartman.jpg">
+
+    <hr>
+    <section class="columna-contenido">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates incidunt assumenda quisquam, nobis quasi facilis eaque facere sequi, blanditiis ipsam sunt, ad laborum quidem vitae sed non ullam porro tempora a suscipit. Modi neque fugit nesciunt pariatur ex consequuntur sapiente minima mollitia quod, rem repudiandae ullam tempora nulla laborum molestiae numquam optio error recusandae vero ducimus dolores quo sit. Molestiae sapiente qui ullam, sint reprehenderit sit maxime reiciendis nesciunt minus, sequi a? Ipsum cupiditate error, quasi iste consequatur illum asperiores possimus minus dolorem modi non officiis mollitia nesciunt obcaecati labore! Corporis fugit blanditiis voluptatem nemo at minus deserunt, excepturi facilis.</section>
+    <section class="columna-contenido">Quas rem voluptatum, odit iure ratione et natus incidunt minima, repellendus sapiente molestias voluptas! Maiores fugiat earum quos veniam recusandae eligendi magni cumque, consequatur quod eos eveniet repellat dolorem possimus distinctio aliquam illum perferendis id voluptatibus rerum rem quisquam deserunt. Ipsam, possimus iure ad fugiat explicabo alias facilis quisquam illum, nulla est mollitia nisi praesentium at tempora debitis nostrum qui? Impedit hic aspernatur ratione illum natus inventore deleniti mollitia quos, itaque sint architecto. Esse accusamus in enim maxime corrupti voluptatibus? Dolor quis quibusdam repellendus tempore necessitatibus placeat. Necessitatibus maxime aliquid sit repellat magni, eveniet aliquam dignissimos nihil ex! Ratione, praesentium!</section>
+    <section class="columna-contenido">Exercitationem sequi eius deleniti aut beatae culpa, ullam, cumque doloremque totam, quae illum recusandae nostrum temporibus ab ipsum quaerat. Dolorem optio porro numquam quae ipsum itaque error, cupiditate rem ab ut et quia repellat dolorum magni commodi, impedit minima fugit delectus expedita quas beatae eligendi. Adipisci consequuntur nostrum numquam facere accusamus dicta expedita, nisi labore fugit odio earum optio architecto voluptates neque assumenda debitis commodi delectus vel ullam tenetur maxime, perspiciatis facilis magni error. Ab est fugit, blanditiis libero pariatur veritatis expedita, beatae, doloribus totam impedit aut qui assumenda in cupiditate optio culpa! Porro excepturi placeat error non nobis harum.</section>
+</body>
+</html>

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: FuenteGoticaSalvaje;
+    src: url(../fonts/OldLondon.ttf);
+}
+
 #logo{
     /*margin-top: ;
     margin-bottom: ;
@@ -11,4 +16,78 @@ body{
     background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size:cover;
+    margin:0;
+}
+
+#contenedor{
+    background-color:rgba(0,0,0,0.65);
+    height: 100vh;
+}
+
+#login{
+    background-color: #000000ad;
+    width: 300px;
+    color: white;
+    border-radius: 5px;
+    padding: 30px 80px 30px 80px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 600px;
+}
+
+#login:hover{ /*PSeudoclases*/
+    background-color:rgba(255, 0, 0, 0.418);
+}
+
+#login h1{ /*Aplicar estilo a cualquier etiqueta h1 DENTRO de la etiqueta con id #login*/
+    font-size:32px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    /*font-family: 'Aguafina Script', cursive; /*Fuente del API de Google fonts*/
+    /*font-family: FuenteGoticaSalvaje, Arial;*/
+
+}
+
+#login input[type='text'], #login input[type='password']{
+    background-color: #272727;
+    font-size: 1.1rem;
+    /* border: 0px solid #000; */
+    border-width: 0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 13px;
+    box-sizing: border-box; /*Para que el ancho de los input tome en cuenta el margin y padding */
+}
+
+#login button{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 11px;
+    background-color: #E50914;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.texto-pequenio{
+    font-size: 0.9rem;
+    color: #a7a7a7;
+}
+
+.enlace{
+    float:right;
+    text-decoration: none;
+}
+
+.enlace:hover{
+    text-decoration: underline;
+}
+
+.texto-izquierda{
+    float: left;
 }
