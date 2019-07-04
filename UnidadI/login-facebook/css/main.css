@@ -1,0 +1,15 @@
+body {
+    padding-top: 5rem;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+#login{
+    margin-left:auto;
+}
+
+.bg-dark {
+    background-color: #3B5998!important;
+}

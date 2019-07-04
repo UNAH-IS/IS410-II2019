@@ -3,7 +3,16 @@
     border-color:#563D7C;
 }
 
-.btn-primary:hover{
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background-color:#301b50;
+    border-color:#301b50;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle{
     background-color:#301b50;
     border-color:#301b50;
 }
