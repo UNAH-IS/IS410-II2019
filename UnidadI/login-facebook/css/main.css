@@ -1,15 +1,56 @@
 body {
-    padding-top: 5rem;
+  padding-top: 5rem;
+  background-color:#EDF0F5;
 }
+
 .starter-template {
-    padding: 3rem 1.5rem;
-    text-align: center;
+  padding: 3rem 1.5rem;
 }
 
-#login{
-    margin-left:auto;
+.bg-dark{
+  background-color:#3B5998!important;
 }
 
-.bg-dark {
-    background-color: #3B5998!important;
+.navbar{
+  padding: 25px 300px 25px 300px;
+}
+
+/*@media (min-width: 600px){
+  .navbar{
+    padding: 25px 300px 25px 300px;
+  }
+}*/
+.navbar .btn-primary{
+  background-color: #4267b2;
+  border-color: #29487d;
+  padding:3px;
+  font-size:.9rem;
+  font-weight: bold;
+}
+
+.navbar input[type="text"], .navbar input[type="password"]{
+  font-size:.8rem;
+}
+
+#tabla-informacion td{
+  padding:17px;
+  color:#666;
+  font-size:20px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.texto-negrita{
+  font-weight: bold;
+  color: #000000;
+}
+
+h1{
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+#formulario-registro input{
+  font-size: 1.3rem;
+  margin: 10px;
 }
