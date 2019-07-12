@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Facebook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
   </head>
@@ -29,8 +30,8 @@
       <div class="starter-template">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <h1>Connect with friends and the world around you on Facebook.</h1>
+            <section id="contenido-informativo" class="col-md-6 d-none d-sm-block">
+              <h2>Connect with friends and the world around you on Facebook.</h2>
               <table id="tabla-informacion">
                 <tr>
                   <td><img src="img/icono1.png" alt="" srcset=""></td>
@@ -45,24 +46,45 @@
                   <td><span class="texto-negrita">Find more</span> of what you're looking for with Facebook Search.</td>
                 </tr>
               </table>
-            </div>
-            <div class="col-md-6">
+            </section>
+            <section class="col-md-6">
                 <h1>Sign Up</h1>
                 <p>It’s free and always will be.</p>
                 <form id="formulario-registro">
-                  <input class="form-control" type="text" placeholder="First name">
-                  <input class="form-control" type="text" placeholder="Last name">
-                  <input class="form-control" type="text" placeholder="Mobile number or email">
-                  <input class="form-control" type="text" placeholder="New Password">
-                  <input class="form-control" type="date" placeholder="Birthday">
+                  <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-12"><input class="form-control" type="text" placeholder="First name"></div>
+                    <div class="col-xl-6 col-lg-6 col-12"><input class="form-control" type="text" placeholder="Last name"></div>
+                    <div class="col-12"><input class="form-control" type="text" placeholder="Mobile number or email"></div>
+                    <div class="col-12"><input class="form-control" type="text" placeholder="New Password"></div>
+                    <div class="col-12">Birthday</div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select class="form-control"><option>Mes</option></select></div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select class="form-control"><option>Día</option></select></div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select class="form-control"><option>Año</option></select></div>
+                    <div class="col-12">Gender</div>
+                    <div class="col-12">
+                        <label><input type="radio">Female</label> 
+                        <label><input type="radio">Male</label> 
+                        <label><input type="radio">Custom</label>
+                    </div>
+                    <div class="col-12">
+                      <div id="texto-terminos">
+                        By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button id="boton-sign-up" class="btn btn-success">Sign Up</button>
+                    </div>
+                  </div>
                 </form>
-              </div>
+              </section>
           </div>
         </div>
       </div>
-    
-    </main>
 
+    </main>
+    <footer>
+      
+    </footer>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

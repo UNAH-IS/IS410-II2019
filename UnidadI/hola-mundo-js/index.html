@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table td {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        //Cometarios de una linea
+        /*
+        Comentarios de muchas lineas
+        */
+        //var -> Scope o visibilidad es a nivel de funcion
+        //let -> Scope o visibilidad es a nivel de bloque
+        //undefined es el valor por defecto de una variable no inicializada
+        let a=5;  //Entero
+        let b='Juan'; //Cadena
+        let c=3.4; //Flotante
+        let d=true; //Boleano
+
+        let arreglo = [1,23,54,65,67]; //Arreglo
+
+        //Objetos JSON-> JavaScript Object Notation
+        let persona = {
+            nombre:"Juan",
+            apellido:"Perez",
+            edad:35,
+            fechaNacimiento:{ 
+                dia:11,
+                mes:"Junio",
+                anio:2000
+            }
+        };
+
+
+        document.write("<select>");
+        
+        for(var i=0;i<1000;i++)
+            document.write("<option>Opcion"+i+"</option>");
+        
+        document.write("</select>");
+        console.log("Hola mundo, este es un mensaje en la consola");
+        console.error("Hola mundo, este es un mensaje de error, en realidad no hay error, solo sale en rojo");
+        document.write("<br><br><hr>");
+        document.write(JSON.stringify(persona)); //Convierte un JSON a cadena
+        console.log(persona);
+        console.log("Persona: " + JSON.stringify(persona));
+        //alert(JSON.stringify(persona));
+        //alert("Hola mundo, este es un cuadro de dialogo");
+        /*document.write(
+            "<table>"+
+            "    <tr>"+
+            "        <td>Nombre</td>"+
+            "        <td>"+persona.nombre+"</td>"+
+            "    </tr>"+
+            "    <tr>"+
+            "        <td>Apellido</td>"+
+            "        <td>"+persona.apellido+"</td>"+
+            "    </tr>"+
+            "    <tr>"+
+            "        <td>Edad</td>"+
+            "        <td>"+persona.edad+"</td>"+
+            "    </tr>"+
+            "</table>"
+        );*/
+        document.write(`
+            <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td>${persona.nombre}</td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td>${persona.apellido}</td>
+                </tr>
+                <tr>
+                    <td>Edad</td>
+                    <td>${persona.edad}</td>
+                </tr>
+                <tr>
+                    <td>Fecha nacimiento</td>
+                    <td>${persona.fechaNacimiento.dia}/${persona.fechaNacimiento.mes}/${persona.fechaNacimiento.anio}</td>
+                </tr>
+            </table>
+        `);
+        
+        c = sumar(7,8);
+        console.log(`Suma: ${sumar(5,6)}`);
+        
+        //Definir una funcion
+        function sumar(a,b){
+            return a+b;
+        }
+        
+
+        
+        let restar = function (a,b){
+            return a-b;
+        }
+        //En caso de definir una funcion como variable solo puede ser llamada despues de su definición
+        console.log(`Resta: ${restar(6,6)}`);
+
+        let operaciones = {
+            valorX:5,
+            resta: function(a,b){
+                return a-b;
+            },
+            suma:function(a,b){
+                return a+b;
+            },
+            multiplica:function(a,b){
+                return a*b;
+            }
+        }
+
+        console.log (`Resta desde un JSON ${operaciones.resta(4,2)}`);
+        console.log (`Suma desde un JSON ${operaciones.suma(4,2)}`);
+        console.log (`Multiplicacion desde un JSON ${operaciones.multiplica(4,2)}`);
+
+        //Autoejecucion de una funcion
+        (function(){
+            console.log("Hola mundo");
+        })();
+
+        function ejecutarFuncion(f){
+            f();
+        }
+
+        ejecutarFuncion(function(){
+            console.log("Que loco esto");
+        });
+
+    </script>
+    
+</body>
+</html>
