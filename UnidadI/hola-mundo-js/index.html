@@ -39,6 +39,9 @@
             }
         };
 
+        persona.nombre = "Pedro";
+        persona.genero = 'Masculino';
+
 
         document.write("<select>");
         
@@ -119,6 +122,11 @@
                 return a*b;
             }
         }
+        
+        /*
+        operaciones.resta = function(){
+            console.log("Nueva funcion para resta");
+        };*/
 
         console.log (`Resta desde un JSON ${operaciones.resta(4,2)}`);
         console.log (`Suma desde un JSON ${operaciones.suma(4,2)}`);
@@ -136,6 +144,62 @@
         ejecutarFuncion(function(){
             console.log("Que loco esto");
         });
+
+        //ejecutarFuncion('Hola'); //Esto sería un error porque estaría esperando una función
+
+        //EcmaScript (ES6->2015)
+        /*
+            Creacion de clases
+            Nueva forma de declarar funciones.
+        */
+
+        /*
+        let division = function(a,b){
+            return a/b;
+        }
+        */
+
+        let division = (a,b)=>a/b;
+        let otraFuncionConMuchasLineas = (a,b)=>{
+            //instrucciones
+        }
+
+        console.log(`División con el estandar ES6: ${division(10,2)}`);
+
+        class Computadora{
+
+            constructor(marca,modelo,color,tamanio,procesador,precio){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.tamanio = tamanio;
+                this.procesador = procesador;
+                this.precio = precio;
+            }
+
+            encender(){
+                console.log('Encendiendo la computadora '+ this.marca);
+            }
+
+            apagar(){
+                console.log('Apagando');
+            }
+
+            explotar(){
+                console.log('Explotando!!!!');
+            }
+
+            get detalle(){
+                return this.marca+', '+this.modelo;
+            }
+
+        }
+
+        let computadora = new Computadora('Asus','N345','Negro','Grande','i7',100);
+        computadora.encender();
+        computadora.apagar();
+        console.log(computadora.detalle);
+        console.log(computadora);
 
     </script>
     

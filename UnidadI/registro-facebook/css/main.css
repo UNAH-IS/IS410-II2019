@@ -1,0 +1,108 @@
+body {
+  padding-top: 5rem;
+  background-color:#EDF0F5;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+}
+
+.bg-dark{
+  background-color:#3B5998!important;
+}
+
+.navbar .btn-primary{
+  background-color: #4267b2;
+  border-color: #29487d;
+  padding:3px;
+  font-size:.9rem;
+  font-weight: bold;
+}
+
+.navbar input[type="text"], .navbar input[type="password"]{
+  font-size:.8rem;
+}
+
+#tabla-informacion td{
+  padding:17px;
+  color:#666;
+  font-size:1.1rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.texto-negrita{
+  font-weight: bold;
+  color: #000000;
+}
+
+h2{
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+h1{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#formulario-registro input, #formulario-registro select{
+  font-size: 1.1rem;
+  margin: 3px;
+}
+
+
+/* Extra small devices (phones, 600px and down) xs*/
+@media only screen and (max-width: 600px) {
+  /*#contenido-informativo{
+    display:none;
+  }*/
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) sm*/
+@media only screen and (min-width: 600px) {
+  /*#contenido-informativo{
+    display:none;
+  }*/
+} 
+
+/* Medium devices (landscape tablets, 768px and up) md */
+@media only screen and (min-width: 768px) {
+  /*#contenido-informativo{
+    display:block;
+  }*/
+} 
+
+/* Large devices (laptops/desktops, 992px and up) lg */
+@media only screen and (min-width: 992px) {
+  .navbar{
+    padding: 25px 150px 25px 150px;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) xl */
+@media only screen and (min-width: 1200px) {
+  .navbar{
+    padding: 25px 300px 25px 300px;
+  }
+}
+
+
+.starter-template section{
+  padding: 5px 50px 50px 50px;
+}
+
+#texto-terminos{
+  font-size:.7rem;
+  color:rgb(88, 88, 88);
+  width: 80%;
+}
+
+#boton-sign-up{
+  background-image: linear-gradient(#74B55F, #598B45);
+  border-color:rgb(59, 94, 45);
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-top:30px;
+  font-weight: bold;
+}

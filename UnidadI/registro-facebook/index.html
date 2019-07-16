@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Facebook"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Email or Phone">
+          <input class="form-control mr-sm-2" type="text" placeholder="Password">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
+    
+    <main role="main" class="container">
+    
+      <div class="starter-template">
+        <div class="container">
+          <div class="row">
+            <section id="contenido-informativo" class="col-md-6 d-none d-sm-block">
+              <h2>Connect with friends and the world around you on Facebook.</h2>
+              <table id="tabla-informacion">
+                <tr>
+                  <td><img src="img/icono1.png" alt="" srcset=""></td>
+                  <td><span class="texto-negrita">See photos and updates</span> from friends in News Feed.</td>
+                </tr>
+                <tr>
+                  <td><img src="img/icono2.png" alt="" srcset=""></td>
+                  <td><span class="texto-negrita">Share what's new</span> in your life on your Timeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="img/icono3.png" alt="" srcset=""></td>
+                  <td><span class="texto-negrita">Find more</span> of what you're looking for with Facebook Search.</td>
+                </tr>
+              </table>
+            </section>
+            <section class="col-md-6">
+                <h1>Sign Up</h1>
+                <p>It’s free and always will be.</p>
+                <form id="formulario-registro">
+                  <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-12"><input id="first-name" class="form-control" type="text" placeholder="First name" value="Juan"></div>
+                    <div class="col-xl-6 col-lg-6 col-12"><input id="last-name" class="form-control" type="text" placeholder="Last name"></div>
+                    <div class="col-12"><input id="email" class="form-control" type="text" placeholder="Mobile number or email"></div>
+                    <div class="col-12"><input id="password" class="form-control" type="text" placeholder="New Password"></div>
+                    <div class="col-12">Birthday</div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select id="month" class="form-control"><option>Mes</option></select></div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select id="day" class="form-control"><option>Día</option></select></div>
+                    <div class="col-xl-4 col-lg-4 col-12"><select id="year" class="form-control"><option>Año</option></select></div>
+                    <div class="col-12">Gender</div>
+                    <div class="col-12">
+                        <label><input name="gender" value="F" type="radio">Female</label> 
+                        <label><input name="gender" value="M" type="radio">Male</label> 
+                        <label><input name="gender" value="X" type="radio">Custom</label>
+                    </div>
+                    <div class="col-12">
+                      <div id="texto-terminos">
+                        By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button onclick="registrarUsuario()" type="button" id="boton-sign-up" class="btn btn-success">Sign Up</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador.js"></script>
+
+
+
+
+    <input type="submit" value="Click">
+    <input type="button" value="Click">
+    <button type="submit">Click</button>
+    <button type="button">Click</button>
+  </body>
+</html>
