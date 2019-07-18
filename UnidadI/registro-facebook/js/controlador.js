@@ -1,4 +1,14 @@
 var registros=[];//Variable global
+var campos =[
+    {campo:'first-name',valido:false},
+    {campo:'last-name',valido:false},
+    {campo:'email',valido:false},
+    {campo:'password',valido:false},
+    {campo:'year',valido:false},
+    {campo:'day',valido:false},
+    {campo:'month',valido:false}
+];
+
 
 let meses = ['Enero', 'Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
 for(let i=0; i<meses.length; i++)
@@ -15,14 +25,14 @@ for(let i=anioActual; i>=anioActual - 100; i--)
 
 function registrarUsuario(){
     let genderInput = document.querySelector('input[type="radio"][name="gender"]:checked');
-    if (document.getElementById('first-name').value==''){
-        document.getElementById('first-name').classList.remove('input-success');
-        document.getElementById('first-name').classList.add('input-error');
-        return;//No agregará nada porque esta vacio
-    }else{
-        document.getElementById('first-name').classList.remove('input-error');
-        document.getElementById('first-name').classList.add('input-success');
-    }
+
+    for (let i=0;i<campos.length;i++)
+        campos[i].valido = validarCampoVacio(campos[i].campo);
+    
+    for (let i=0;i<campos.length;i++)
+        if (!campos[i].valido) return;
+
+    
     // (condicion)?verdadero:falso; //if corto
     let persona = {
         firstName: document.getElementById('first-name').value,
@@ -49,4 +59,16 @@ function registrarUsuario(){
         </tr>`;
     /*console.log(document.querySelector('input[type="radio"][name="gender"]:checked').value);*/
     console.log(registros);
+}
+
+function validarCampoVacio(id){
+    if (document.getElementById(id).value==''){
+        document.getElementById(id).classList.remove('is-valid');
+        document.getElementById(id).classList.add('is-invalid');
+        return false;//Esta mal
+    }else{
+        document.getElementById(id).classList.remove('is-invalid');
+        document.getElementById(id).classList.add('is-valid');
+        return true;//Esta bien
+    }
 }

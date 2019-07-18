@@ -53,14 +53,70 @@
                 <p>It’s free and always will be.</p>
                 <form id="formulario-registro">
                   <div class="row">
-                    <div class="col-xl-6 col-lg-6 col-12"><input id="first-name" class="form-control" type="text" placeholder="First name" value="Juan"></div>
-                    <div class="col-xl-6 col-lg-6 col-12"><input id="last-name" class="form-control" type="text" placeholder="Last name" value="Perez"></div>
-                    <div class="col-12"><input id="email" class="form-control" type="text" placeholder="Mobile number or email" value="jperez@gmail.com"></div>
-                    <div class="col-12"><input id="password" class="form-control" type="text" placeholder="New Password" value="asd.456"></div>
+                    <div class="col-xl-6 col-lg-6 col-12">
+                        <input id="first-name" class="form-control" type="text" placeholder="First name" value="Juan">
+                        <div class="valid-feedback">
+                          Ok
+                        </div>
+                        <div class="invalid-feedback">
+                          Campo obligatorio
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-12">
+                      <input id="last-name" class="form-control" type="text" placeholder="Last name" value="Perez">
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <input id="email" class="form-control" type="text" placeholder="Mobile number or email" value="jperez@gmail.com">
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <input id="password" class="form-control" type="text" placeholder="New Password" value="asd.456">
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
                     <div class="col-12">Birthday</div>
-                    <div class="col-xl-4 col-lg-4 col-12"><select id="month" class="form-control"><option>Mes</option></select></div>
-                    <div class="col-xl-4 col-lg-4 col-12"><select id="day" class="form-control"><option>Día</option></select></div>
-                    <div class="col-xl-4 col-lg-4 col-12"><select id="year" class="form-control"><option>Año</option></select></div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select id="month" class="form-control"><option value="">Mes</option></select>
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select id="day" class="form-control"><option  value="">Día</option></select>
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select id="year" class="form-control"><option  value="">Año</option></select>
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
                     <div class="col-12">Gender</div>
                     <div class="col-12">
                         <label><input name="gender" value="F" type="radio">Female</label> 
