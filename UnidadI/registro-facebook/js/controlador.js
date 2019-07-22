@@ -29,6 +29,19 @@ function registrarUsuario(){
     for (let i=0;i<campos.length;i++)
         campos[i].valido = validarCampoVacio(campos[i].campo);
     
+    if (document.getElementById('email')!=''){
+        
+        let resultadoEmail = validarEmail(document.getElementById('email').value);
+        console.log('Validará el correo electronico: ' + resultadoEmail);
+        campos[2].valido = resultadoEmail;
+        marcarInput('email',resultadoEmail);
+        if (!resultadoEmail)
+            document.getElementById('email-invalid-feedback').innerHTML = "Correo Inválido";
+            
+        console.log(campos);
+    }
+
+    
     for (let i=0;i<campos.length;i++)
         if (!campos[i].valido) return;
 
@@ -62,13 +75,34 @@ function registrarUsuario(){
 }
 
 function validarCampoVacio(id){
-    if (document.getElementById(id).value==''){
-        document.getElementById(id).classList.remove('is-valid');
-        document.getElementById(id).classList.add('is-invalid');
-        return false;//Esta mal
-    }else{
+    let resultado = (document.getElementById(id).value=='')?false:true;
+    marcarInput(id, resultado);
+    return resultado;
+}
+
+
+function validarEmail(email){
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+
+function validarEmailEnLinea(email){
+    console.log(email);
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let resultado =  re.test(email);
+    marcarInput('email',resultado);
+    document.getElementById('email-invalid-feedback').innerHTML = "Correo Inválido";
+    return resultado;
+}
+
+
+function marcarInput(id,valido){
+    if (valido){
         document.getElementById(id).classList.remove('is-invalid');
         document.getElementById(id).classList.add('is-valid');
-        return true;//Esta bien
+    } else{
+        document.getElementById(id).classList.remove('is-valid');
+        document.getElementById(id).classList.add('is-invalid');        
     }
 }

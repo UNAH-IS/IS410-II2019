@@ -72,11 +72,11 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <input id="email" class="form-control" type="text" placeholder="Mobile number or email" value="jperez@gmail.com">
+                      <input onkeyup="validarEmailEnLinea(this.value)" id="email" class="form-control" type="text" placeholder="Mobile number or email" value="jperez@gmail.com">
                       <div class="valid-feedback">
                         Ok
                       </div>
-                      <div class="invalid-feedback">
+                      <div class="invalid-feedback" id="email-invalid-feedback">
                         Campo obligatorio
                       </div>
                     </div>
