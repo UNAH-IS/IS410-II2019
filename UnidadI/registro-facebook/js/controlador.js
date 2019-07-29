@@ -1,4 +1,17 @@
-var registros=[];//Variable global
+var localStorage = window.localStorage;
+llenarTabla();
+
+//Leer toda la información del localStorage
+function llenarTabla(){
+    document.getElementById('tabla-registros').innerHTML = ""; //Limpiar la tabla
+    for (let i=0;i<localStorage.length;i++){
+        console.log(localStorage.key(i));
+        let persona = JSON.parse(localStorage.getItem(localStorage.key(i))); //Convertir de cadena a JSON
+        anexarRegistroTabla(persona, localStorage.key(i));
+    }
+}
+
+//var registros=[];//Variable global//Este es el arreglo de JSONs, ya no se ocupa porque se guarda la informacion en LocalStorage
 var campos =[
     {campo:'first-name',valido:false},
     {campo:'last-name',valido:false},
@@ -46,6 +59,7 @@ function registrarUsuario(){
         if (!campos[i].valido) return;
 
     
+    //Todo esta bien, todo saldra bien... OK?
     // (condicion)?verdadero:falso; //if corto
     let persona = {
         firstName: document.getElementById('first-name').value,
@@ -59,19 +73,15 @@ function registrarUsuario(){
             year: document.getElementById('year').value
         }
     }
-    registros.push(persona);
+    //registros.push(persona);//Este es el arreglo de JSONs, ya no se ocupa porque se guarda la informacion en LocalStorage
+    //setItem(llave,valor);
+    let key = localStorage.key(localStorage.length-1)==null?0:parseInt(localStorage.key(localStorage.length-1))+1;
 
-    document.getElementById('tabla-registros').innerHTML+=
-        `<tr>
-            <td>${persona.firstName}</td>
-            <td>${persona.lastName}</td>
-            <td>${persona.email}</td>
-            <td>${persona.gender}</td>
-            <td>${persona.password}</td>
-            <td>${persona.birthday.day}/${persona.birthday.month}/${persona.birthday.year}</td>
-        </tr>`;
+    console.log("Llave a guardar: "+ key);
+    localStorage.setItem( key,JSON.stringify(persona));
+    anexarRegistroTabla(persona);
     /*console.log(document.querySelector('input[type="radio"][name="gender"]:checked').value);*/
-    console.log(registros);
+    //console.log(registros);
 }
 
 function validarCampoVacio(id){
@@ -105,4 +115,24 @@ function marcarInput(id,valido){
         document.getElementById(id).classList.remove('is-valid');
         document.getElementById(id).classList.add('is-invalid');        
     }
+}
+
+function anexarRegistroTabla(persona, id){
+    document.getElementById('tabla-registros').innerHTML+=
+        `<tr>
+            <td>${persona.firstName}</td>
+            <td>${persona.lastName}</td>
+            <td>${persona.email}</td>
+            <td>${persona.gender}</td>
+            <td>${persona.password}</td>
+            <td>${persona.birthday.day}/${persona.birthday.month}/${persona.birthday.year}</td>
+            <td><button type="button" onclick="eliminar(${id})"><i class="fas fa-trash-alt"></i></button></td>
+        </tr>`;
+}
+
+
+function eliminar(id){
+    console.log("Eliminar registro con id: " + id);
+    localStorage.removeItem(id);
+    llenarTabla();
 }

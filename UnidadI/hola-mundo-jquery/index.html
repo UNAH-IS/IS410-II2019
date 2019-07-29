@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .texto-grande{
+            font-size:2.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input id="usuario" type="text" placeholder="Usuario" value="Juan">
+    <input id="password" type="password" placeholder="Password">
+    <input name="genero" type="radio" value="M">
+    <input name="genero" type="radio" value="F">
+    <input name="genero" type="radio" value="X">
+    <button id="btn-login">Login</button>
+    <div class="container">
+        Contenedor
+        <div id="fila" class="row">Fila</div>
+    </div>
+    <hr>
+    <div id="contenido" style="background-color:rgb(203, 40, 224);color:white;">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus aperiam iusto aspernatur error necessitatibus ipsa id autem similique vero magnam unde, voluptate doloremque omnis reprehenderit officiis repellat voluptatum laboriosam odit cupiditate asperiores! Nam, ab adipisci quisquam provident pariatur, nisi quaerat et molestiae eaque neque est, quos molestias veritatis aut sed.
+    </div>
+    <button id="btn-ocultar">Ocultar</button>
+    <button id="btn-mostrar">Mostrar</button>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+         /*Manipular el DOM*/
+        console.log(document.getElementById('usuario').value);
+        console.log(document.querySelector('#usuario').value);
+        console.log($('#usuario').val());
+        /*Gestionar eventos*/
+        $('#btn-login').click(function(){
+            console.log('Evento asignado con jquery');
+            console.log(document.querySelector('input[type="radio"][name="genero"]:checked').value);
+            console.log($('input[type="radio"][name="genero"]:checked').val());
+            document.getElementById("fila").innerHTML = 'Nuevo contenido';
+            $('#fila').html('Nuevo contenido con jQUERY');
+            console.log('Contenido actual del div: '+$('#fila').html());
+            $('#fila').append(' contenido acumulado');
+            $('#fila').css('background-color','#ff0000');
+            $('#fila').addClass('texto-grande'); 
+            //console.log(document.querySelector('.container .row'));
+            //().html('Nuevo contenido asignado con jQUERY');
+        });
+        
+        document.getElementById('btn-login').addEventListener('click',function(){
+            console.log('Evento asignado con JS nativo');
+        });
+
+        document.getElementById('btn-login').addEventListener('click',function(){
+            console.log('Esta es otra funcion agregada al evento click utilizando JS nativo');
+        });
+
+
+        $('#btn-ocultar').click(function(){
+            //$('#contenido').css('display','none');
+            $('#contenido').fadeOut(500);
+        });
+        $('#btn-mostrar').click(function(){
+            //$('#contenido').css('display','block');
+            $('#contenido').fadeIn(500);
+        });
+        /*Realizar animaciones*/
+        /*AJAX   */
+    </script>
+</body>
+</html>

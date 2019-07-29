@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CNN</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  
+  <main role="main" class="container starter-template">
+    <!--Noticia principal-->
+    <div class="row">
+        <div class="col-12">
+          <div id="encabezado-principal" class="encabezado" style="background-image:url(img/principal.jpg)">
+            <span class="leyenda">Ultima hora</span>
+          </div>
+          <div class="descripcion">
+            <h4>Lorem Ipsum</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos odio consequuntur eos obcaecati eius voluptates nesciunt vero vel atque hic dolore minima odit accusantium explicabo iure illum inventore ex laboriosam dolorum, quidem ullam assumenda, optio voluptatum. Inventore ab, repudiandae incidunt eveniet ad assumenda molestiae! Aperiam ex qui cupiditate accusantium?</p>
+            <button class="btn btn-link">Ver más</button>|<button class="btn btn-link">Eliminar</button>
+          </div>
+        </div>
+    </div>
+    <!--Fin Noticia principal-->
+    <div class="row" id="noticias">
+      <!--
+
+        EMMET:
+        (div.col-md-4.col-sm-12>((div.encabezado>span+img)+(div.descripcion>h1+(p>lorem50)+a*2)))*3
+
+      -->
+      
+      
+    </div><!--/.row--> 
+  </main><!-- /.container -->  
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/controlador.js"></script>
+</body>
+</html>

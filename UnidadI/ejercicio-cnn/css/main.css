@@ -1,0 +1,49 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+}
+
+.bg-dark {
+  background-color: #000000!important;
+}
+.encabezado{
+  height: 200px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding:10px;
+}
+
+.descripcion{
+  min-height: 250px;
+  background-color:#000000;
+  color:rgb(214, 214, 214);
+  padding:10px;
+}
+
+.leyenda{
+  background-color:rgba(255, 0, 0, 0.555);
+  color:white;
+  font-weight: bold;
+  padding:4px;
+  border-radius: 5px;
+}
+.descripcion h1{
+  font-weight: bold;
+}
+
+.descripcion p{
+  font-size: .85rem;
+}
+.btn-link{
+  font-size:0.85rem;
+  padding:2px;
+}
+
+#encabezado-principal{
+  height: 400px !important;
+}
+.titulo-categoria{
+  margin-top:50px;
+}
