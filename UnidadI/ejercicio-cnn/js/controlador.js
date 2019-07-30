@@ -14,6 +14,7 @@ var categorias=[
     {nombreCategoria:"Deportes",descripcion:"Deportes"}
 ];
 
+
 /*
 var noticias=[
     {
@@ -80,6 +81,7 @@ for(let i=0;i<noticias.length;i++){
     for(let i=0;i<categorias.length;i++){
         $('#noticias').append(`<div class="col-12 titulo-categoria"><h1>${categorias[i].nombreCategoria}</h1></div>`);
         $('#noticias').append(`<div id="${categorias[i].nombreCategoria}" class="row"></div>`);
+        $('#categoria').append(`<option value="${categorias[i].nombreCategoria}">${categorias[i].nombreCategoria}</option>`);
     }
 
     /*
@@ -114,4 +116,25 @@ for(let i=0;i<noticias.length;i++){
             </div>`
         );
     }
+
 })();
+
+
+
+$("#btn-guardar").click(function(){
+   let noticia = {
+        caratula: $('#caratula').val(),
+        titulo: $('#titulo').val(),
+        fechaPublicacion: $('#fecha-publicacion').val(),
+        likes: $('#likes').val(),
+        comentarios: $('#comentarios').val(),
+        redactor: $('#redactor').val(),
+        resumenNoticia: $('#resumen-noticia').val(),
+        detalleNoticia: $('#detalle-noticia').val(),
+        categoria: $('#categoria').val(),
+        principal: $('#principal').is(':checked'),
+        ultimaHora: $('#ultima-hora').is(':checked')
+    };
+    console.log(noticia);
+    localStorage.setItem(parseInt(localStorage.key(localStorage.length-1))+1, JSON.stringify(noticia));
+});

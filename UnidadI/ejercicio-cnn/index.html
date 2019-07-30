@@ -19,6 +19,9 @@
       <form class="form-inline my-2 my-lg-0 ml-auto">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formulario-noticia">
+          Nueva Noticia
+        </button>
       </form>
     </div>
   </nav>
@@ -49,8 +52,46 @@
       
     </div><!--/.row--> 
   </main><!-- /.container -->  
+  
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="formulario-noticia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nueva noticia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input placeholder="Caratula" id="caratula" type="text" class="form-control">
+          <input placeholder="Titulo" id="titulo" type="text" class="form-control">
+          <input placeholder="Fecha Publicacion" id="fecha-publicacion" type="date" class="form-control">
+          <input placeholder="Likes" id="likes" type="text" class="form-control">
+          <input placeholder="Comentarios" id="comentarios" type="text" class="form-control">
+          <input placeholder="Redactor" id="redactor" type="text" class="form-control">
+          <input placeholder="Resumen Noticia" id="resumen-noticia" type="text" class="form-control">
+          <textarea placeholder="Detalle Noticia" id="detalle-noticia" class="form-control"></textarea>
+          <select placeholder="Categoria" id="categoria" class="form-control">
+            <option>Seleccione una categoria</option>
+          </select>
+          <label>Principal <input type="checkbox" id="principal"></label>
+          <label>Ultima Hora <input type="checkbox" id="ultima-hora"></label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="btn-guardar" type="button" class="btn btn-primary">Guardar noticia</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/controlador.js"></script>
 </body>
 </html>
+
+
+
