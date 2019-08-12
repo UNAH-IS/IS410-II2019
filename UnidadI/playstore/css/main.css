@@ -1,0 +1,35 @@
+body {
+    padding-top: 5rem;
+    background-color:#EEEEEE;
+    font-family: 'Raleway', sans-serif;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+}
+.card{
+    transition: background-color .3s ease-in-out;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.card:hover{
+    background-color:#689F38;
+    color:#fff;
+}
+
+.card-body{
+    padding:10px;
+}
+
+.estrellas{
+    font-size: .6rem;
+}
+
+.texto-aplicacion{
+    font-weight: bold;
+    font-size:1.3rem;
+}
+
+.texto-desarrollador{
+    font-size:.8rem;
+}
