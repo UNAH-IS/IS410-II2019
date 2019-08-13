@@ -3,6 +3,9 @@ body {
     background-color:#EEEEEE;
     font-family: 'Raleway', sans-serif;
 }
+h2{
+    font-weight: bold;
+}
 .starter-template {
     padding: 3rem 1.5rem;
 }
@@ -32,4 +35,16 @@ body {
 
 .texto-desarrollador{
     font-size:.8rem;
+}
+
+.estrella-verde{
+    color:#689F38;
+}
+
+.estrella-roja{
+    color:#e23636;
+}
+
+.comentario{
+    font-size:.85rem;
 }

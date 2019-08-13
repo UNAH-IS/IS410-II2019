@@ -75,7 +75,7 @@ function imprimirAplicaciones(categoria){
 
         $("#aplicaciones").append(
             `<div class="col-lg-2 col-md-3 col-6">
-                <div class="card shadow" onclick="detalleAplicacion()">
+                <div class="card shadow" onclick="detalleAplicacion(${categoria.aplicaciones[j].codigo})">
                     <div class="card-body">
                         <img src="${categoria.aplicaciones[j].icono}" class="img-fluid">
                         <div class="texto-aplicacion">${categoria.aplicaciones[j].nombre}</div>
@@ -95,6 +95,38 @@ function seleccionarCategoria(){
     imprimirAplicaciones(JSON.parse(localStorage.getItem($("#categoria").val())));
 }
 
-function detalleAplicacion(){
+function detalleAplicacion(codigoAplicacion){
+    //¿Cual es la aplicacion?
     $('#modal-detalle').modal('show');
+    console.log("Categoria: " + $('#categoria').val());
+    console.log("Codigo Aplicacion: " + codigoAplicacion);
+    let categoria = JSON.parse(localStorage.getItem($('#categoria').val()));
+    console.log(categoria);
+    for (let i = 0; i < categoria.aplicaciones.length; i++) {
+        if (codigoAplicacion == categoria.aplicaciones[i].codigo){
+            let aplicacion = categoria.aplicaciones[i];
+            console.log('----->Aplicación a mostrar en el modal: ');
+            console.log(aplicacion);
+            $('#nombre-app').html(aplicacion.nombre);
+            $('#imagen-app').attr('src',aplicacion.icono);
+            $('#desarrollador-app').html(aplicacion.desarrollador);
+            $('#descripcion-app').html(aplicacion.descripcion);
+            $('#estrellas-app').html("");
+            for (let j = 0; j < aplicacion.calificacion; j++) {
+                $('#estrellas-app').append('<i class="fas fa-star"></i>');    
+            }
+            for (let j = 0; j < 5-aplicacion.calificacion; j++) {
+                $('#estrellas-app').append('<i class="far fa-star"></i>');    
+            }
+            if (aplicacion.calificacion>=3){
+                $('#estrellas-app').removeClass('estrella-roja');
+                $('#estrellas-app').addClass('estrella-verde');
+            }else{
+                $('#estrellas-app').removeClass('estrella-verde');
+                $('#estrellas-app').addClass('estrella-roja');
+            };
+            
+        }
+    }
+
 }
