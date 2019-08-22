@@ -1,0 +1,36 @@
+Transmisión de información cliente-servidor:
+Peticiones sincronas:
+    Ejecución sincrona:
+        Una instruccion despues de la otra. 
+        No puede ejecutar la siguiente linea si no termino la anterior
+            Instruccion 1 (30min)
+            Instruccion 2 (3 min)
+            Instruccion 3 (2 min)
+            Total: 35min
+
+    *Formulario HTML utilizando la etiqueta form con los atributos action y method
+        action -> Se define la url del recurso de la peticion.
+        method -> se define el metodo de envío de información
+            Metodos disponibles:
+                *GET: Permite enviar información a traves de la URL
+                    HOST?parametro1=valor1&parametro2=valor2&...&parametroN=valorN
+
+                    A este formato se le conoce como URLEncoded
+                *POST: La información se empaqueta y se envia al servidor, esta información no es visible
+                *PUT
+                *DELETE
+                *...
+
+    *Un boton del tipo submit, este boton esta diseñado para empaquetar la información del formulario (etiquetas de formularios, ejm: input, textarea, etc) y enviarla a la URL indicada en el atributo action del formulario.
+    *Los componentes del formulario se deben identificar utilizando el atributo name, cualquier componente que no tenga este atributo no será procesado.
+
+
+
+Peticiones asincronas:
+    Ejecución asincrona:
+        Multiples instrucciones se pueden ejecutar a la vez (o simular).
+        No es necesario que termine la ejecución de una instruccion para que continue la siguiente
+        Instruccion 1 (30min)
+        Instruccion 2 (3 min)
+        Instruccion 3 (2 min)
+        Total: 30min
