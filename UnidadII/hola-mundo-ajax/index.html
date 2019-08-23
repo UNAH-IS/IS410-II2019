@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="usuario" type="text" placeholder="Usuario">
+        <input id="password" type="password" placeholder="Password">
+        <button id="btn-login" type="button">Login</button>
+    </form>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $("#btn-login").click(function(){
+            console.log("Ejecutar peticion AJAX");
+            
+            let parametros = `usuario=${$('#usuario').val()}&password=${$('#password').val()}`;
+            console.log(parametros);
+            $.ajax({
+                url:'procesar.php',//Donde quiero enviar la informacion
+                method:'GET', //GET, POST, PUT, DELETE
+                data:parametros, //Informacion que se enviara (URLEncoded)
+                dataType:'json',//Indica el formato de la respuesta, por defecto es html. (text,xml,json)
+                success:function(res){ //res es la respuesta (response)
+                    console.log('Respuesta del servidor:');
+                    console.log(res);
+                },
+                error:function(error){
+                    console.error(error);
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
