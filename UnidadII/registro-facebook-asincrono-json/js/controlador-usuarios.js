@@ -1,8 +1,35 @@
-llenarTabla();
+(()=>{
+    $.ajax({
+        url:'ajax/obtener-usuarios.php',
+        dataType:'json',
+        success:(res)=>{
+            console.log(res);
+            llenarTabla(res);
+        },
+        error:(error)=>{
+            console.log(error);
+        }
+    });
+})();
+
+
+
 
 //Leer toda la información del localStorage
-function llenarTabla(){
-    document.getElementById('tabla-registros').innerHTML = ""; //Limpiar la tabla
+function llenarTabla(usuarios){
+    $('#tabla-registros').empty(); //Limpiar la tabla
+    for (let i = 0; i < usuarios.length; i++) {
+        $('#tabla-registros').append( 
+            `<tr>
+                <td>${usuarios[i].firstName}</td>
+                <td>${usuarios[i].lastName}</td>
+                <td>${usuarios[i].email}</td>
+                <td>${usuarios[i].password}</td>
+                <td>${usuarios[i].month}/${usuarios[i].day}/${usuarios[i].year}</td>
+                <td>${usuarios[i].gender}</td>
+                <td></td>
+            </tr>`);
+    }
 }
 
 //var registros=[];//Variable global//Este es el arreglo de JSONs, ya no se ocupa porque se guarda la informacion en LocalStorage
@@ -69,13 +96,13 @@ function registrarUsuario(){
     }
     
     //Peticion AJAX para enviar la información al servidor
-    console.log('INFO: ' + $('#formulario').serialize());
-    /*$.ajax({
+    let parametros = $('#formulario').serialize();
+    console.log('Información a enviar al servidor: ' + parametros);
+    
+    $.ajax({
         url:'ajax/agregar-usuario.php',
         method:'POST',
-        data:'',//La informacion que se envia al servidor, URLEncoded
-
-        
+        data:parametros,//La informacion que se envia al servidor, URLEncoded
         dataType:'json',
         success:function(res){
             console.log(res);
@@ -83,7 +110,7 @@ function registrarUsuario(){
         error:function(error){
             console.error(error);
         }
-    });*/
+    });
     ///anexarRegistroTabla(persona);
 }
 
