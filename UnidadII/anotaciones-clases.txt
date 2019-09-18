@@ -1,0 +1,10 @@
+Clase es una estructura de datos o un tipo de datos.
+Puede crearse una clase como una plantilla de un elemento real o abstracto, esto se hace definiendo cualidades o caracteristicas y acciones (verbos).
+
+Pilares de Programacion Orientada a Objetos
+Encapsulación: Se utiliza para proteger los atributos/metodos de una clase ante posibles accesos no intencionales o accidentales. Tecnicamente se aplica definiendo atributos con el modificador private y accediendo a ellos mediante metodos publicos comunmente conocidos como metodos setters y getter
+
+Abstracción: Caracteristica que nos permite encapsular funcionalidades para que sean utilizadas por otros sin necesidad de que sepan como funcionan internamente, es decir se abstraen de su funcionalidad.
+
+Herencia
+Polimorfismo
