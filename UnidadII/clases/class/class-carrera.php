@@ -10,7 +10,7 @@
         private $jefe;
         private $coordinador;
 
-        public function _construct(
+        public function __construct(
             $codigoCarrera,
             $nombreCarrera,
             $cantidadClases,
@@ -46,6 +46,10 @@
                 $this->nombreCarrera = $nombreCarrera;
 
                 return $this;
+        }
+
+        public function __toString(){
+            return $this->codigoCarrera.'///' .$this->nombreCarrera;
         }
     }
 ?>

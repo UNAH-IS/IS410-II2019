@@ -1,14 +1,14 @@
 <?php
     namespace POO;
     class Persona{
-        private $identidad;
-        private $nombre;
-        private $apellido;
-        private $genero;
-        private $fechaNacimiento;
-        private $carrera;
-        private $centroEstudios;
-        private $email;
+        protected $identidad;
+        protected $nombre;
+        protected $apellido;
+        protected $genero;
+        protected $fechaNacimiento;
+        protected $carrera;
+        protected $centroEstudios;
+        protected $email;
 
         public function __construct(
             $identidad,
@@ -109,6 +109,14 @@
 
         public function guardarRegistro(){
             echo "Guardando registro de $this->nombre";
+        }
+
+        public function __toString(){
+            return 'Persona:' . $this->nombre.' '.$this->apellido; 
+        }
+
+        public function matricular(){
+            echo 'Matricular persona';
         }
     }
 

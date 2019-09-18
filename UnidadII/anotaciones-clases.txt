@@ -6,5 +6,13 @@ Encapsulación: Se utiliza para proteger los atributos/metodos de una clase ante
 
 Abstracción: Caracteristica que nos permite encapsular funcionalidades para que sean utilizadas por otros sin necesidad de que sepan como funcionan internamente, es decir se abstraen de su funcionalidad.
 
-Herencia
+Herencia: Es la funcionalidad que permite reutilizar codigo extendiendo la funcionalidad de una clase base.
+Se aplica herencia identificando atributos/metodos en comun de un conjunto de clases y encapsulandolos en una nueva clase la cual se denominará clase padre, superclase o clase base. De dicha clase se pueden extender más clases las cuales son denominadas clases hijas, subclases o clases derivadas.
+
 Polimorfismo
+
+
+Atributos/Metodos estaticos:
+Son miembros a los cuales se puede acceder sin necesidad de tener una instancia.
+En dicho caso se tiene que acceder al atributo utilizando el nombre de la clase.
+En el caso de los atributos estaticos tienen el mismo valor para cualquier instancia.
