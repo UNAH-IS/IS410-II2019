@@ -8,6 +8,22 @@ Abstracción: Caracteristica que nos permite encapsular funcionalidades para que
 
 Herencia: Es la funcionalidad que permite reutilizar codigo extendiendo la funcionalidad de una clase base.
 Se aplica herencia identificando atributos/metodos en comun de un conjunto de clases y encapsulandolos en una nueva clase la cual se denominará clase padre, superclase o clase base. De dicha clase se pueden extender más clases las cuales son denominadas clases hijas, subclases o clases derivadas.
+    *Clases Abstractas: Son estructuras de datos más genericas, se utilizan generalmente para clases padre y tiene las siguientes caracteristicas:
+        -No se puede instanciar
+        -El modificador utilizado para clases abstractas es abstract class
+        -Un metodo abstracto no tiene cuerpo, solo se define, ademas es OBLIGATORIO sobreescribirlo en clases hijas.
+        -Una clase abstracta puede tener o no metodos abstractos.
+        -Si un metodo es abstracto, la clase debe ser abstracta.
+    *Interfaz (interface): Estructura de datos similar a una clase, su objetivo es definir reglas y generalizar aún más que las clases abstractas. En algunas ocasiones es llamada clase abstracta pura.
+        -No se puede instanciar.
+        -No tiene constructor.
+        -Toooooodos sus metodos son abstractos.
+        -Todos sus miembros son public
+        -Todos sus atributos son constantes estaticas.
+        -Se utiliza la palabra reservada interface en vez de class
+        -Para aplicar herencia entre clase e interfaz se utiliza implements.
+        -Para aplicar herencia entre interfaz e interfaz se utiliza extends.
+    
 
 Polimorfismo
 

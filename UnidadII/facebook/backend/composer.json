@@ -1,0 +1,13 @@
+{
+    "name": "marin/backend-facebook",
+    "description": "Backend con firebase",
+    "authors": [
+        {
+            "name": "Erick Marín",
+            "email": "erick.marin.v@gmail.com"
+        }
+    ],
+    "require": {
+        "kreait/firebase-php": "^4.32"
+    }
+}

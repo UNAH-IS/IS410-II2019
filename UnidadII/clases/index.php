@@ -36,7 +36,7 @@
         'jperez@gmail.com'
     );
 
-    
+    /*
     $persona
         ->setNombre('Pedro')
         ->setApellido('Rodriguez');
@@ -82,4 +82,5 @@
     //5,10,9
     echo '<br>Resultado 1: ' .Alumno::$atributoEstatico;//10
     echo '<br>Resultado 2: ' .$alumno::$atributoEstatico;//10
+    $alumno->matricular();
 ?>

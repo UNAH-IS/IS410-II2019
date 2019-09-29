@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Facebook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <script src="https://kit.fontawesome.com/ebcee96589.js"></script>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Facebook"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="text" placeholder="Email or Phone">
+          <input class="form-control mr-sm-2" type="text" placeholder="Password">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Login</button>
+        </form>
+      </div>
+    </nav>
+    
+    <main role="main" class="container">
+    
+      <div class="starter-template">
+        <div class="container">
+          <div class="row">
+            <section id="contenido-informativo" class="col-md-6 d-none d-sm-block">
+              <table class="table table-striped table-hover table-responsive">
+                <thead>
+                  <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Password</th>
+                    <th>Birthday</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-registros"></tbody>
+              </table>
+              <div id="loading-tabla" class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </section>
+
+            <section class="col-md-6">
+                <h1>Sign Up</h1>
+                <p>It’s free and always will be.</p>
+                <form id="formulario">
+                  <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-12">
+                        <input name="firstName" id="firstName" class="form-control" type="text" placeholder="First name" value="Juan">
+                        <div class="valid-feedback">
+                          Ok
+                        </div>
+                        <div class="invalid-feedback">
+                          Campo obligatorio
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-12">
+                      <input name="lastName" id="lastName" class="form-control" type="text" placeholder="Last name" value="Perez">
+                    </div>
+                    <div class="col-12">
+                      <input name="email" id="email" class="form-control" type="text" placeholder="Mobile number or email" value="jperez@gmail.com">
+                      <div class="valid-feedback">
+                        Ok
+                      </div>
+                      <div class="invalid-feedback" id="email-invalid-feedback">
+                        Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <input name="password" id="password" class="form-control" type="text" placeholder="New Password" value="asd.456">
+                    </div>
+                    <div class="col-12">Birthday</div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select name="month" id="month" class="form-control">
+                        <option value="">Mes</option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                      </select>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select name="day" id="day" class="form-control">
+                          <option  value="">Día</option>
+                          <option  value="1">1</option>
+                          <option  value="2">2</option>
+                      </select>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-12">
+                      <select name="year" id="year" class="form-control">
+                        <option  value="">Año</option>
+                        <option  value="2010">2010</option>
+                        <option  value="2011">2011</option>
+                        <option  value="2012">2012</option>
+                      </select>
+                    </div>
+                    <div class="col-12">Gender</div>
+                    <div class="col-12">
+                        <label><input name="gender" value="F" type="radio">Female</label> 
+                        <label><input name="gender" value="M" type="radio">Male</label> 
+                        <label><input name="gender" value="X" type="radio">Custom</label>
+                    </div>
+                    <div class="col-12">
+                      <div id="texto-terminos">
+                        By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>. You may receive SMS Notifications from us and can opt out any time.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button id="btn-registrar" onclick="registrarUsuario()" type="button" class="btn btn-success">Registrar</button>
+                      <button id="btn-actualizar" onclick="actualizarUsuario()" type="button" class="btn btn-primary" style="display:none;">Actualizar</button>
+                      <!--button type="button" class="btn btn-success">Update</button-->
+                    </div>
+                  </div>
+                </form>
+              </section>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      
+    </footer>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controlador-usuarios.js"></script>
+
+  </body>
+</html>

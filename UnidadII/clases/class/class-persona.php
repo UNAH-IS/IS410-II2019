@@ -1,6 +1,6 @@
 <?php
     namespace POO;
-    class Persona{
+    abstract class Persona{
         protected $identidad;
         protected $nombre;
         protected $apellido;
@@ -107,17 +107,14 @@
             return $this;
         }
 
-        public function guardarRegistro(){
-            echo "Guardando registro de $this->nombre";
-        }
+        
 
         public function __toString(){
             return 'Persona:' . $this->nombre.' '.$this->apellido; 
         }
 
-        public function matricular(){
-            echo 'Matricular persona';
-        }
+        public abstract function guardarRegistro();
+        public abstract function matricular();
     }
 
 ?>

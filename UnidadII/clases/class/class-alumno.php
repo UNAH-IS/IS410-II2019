@@ -34,9 +34,7 @@
             $this->indice = $indice;
         }
 
-        public function matricular(){
-            echo '<br>Matricular al alumno '.$this->nombre.' '.$this->apellido;
-        }
+       
 
         public function cancelar(){}
         public function adicionar(){}
@@ -49,6 +47,14 @@
 
         public static function eliminarAlumno($id){
             echo 'Eliminar el alumno con código '.$id;
+        }
+
+        public function guardarRegistro(){
+            echo 'Guardar Alumno';
+        }
+
+        public function matricular(){
+            echo '<br>Matricular al alumno '.$this->nombre.' '.$this->apellido;
         }
     }
 ?>
